@@ -11,13 +11,12 @@ A cryptocurrency dashboard that:
 - All work should be committed into a git repository that you can share with us (i.e. Github) to provide evidence of version control​
 - User signup/login is not required
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
 ## Build
+TODO - Gulp this up
+- ng build
+- tsc -p /server
+- node server/server.js
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 

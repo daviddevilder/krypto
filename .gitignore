@@ -4,3 +4,10 @@ package-lock.json
 node_modules/**
 coverage/**
 dist/**
+server/**/*.js
+server/**/*.map
+server/public
+src/**/*.js
+src/**/*.map
+e2e/src/**/*.js
+e2e/src/**/*.map
