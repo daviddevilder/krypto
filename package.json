@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "author": "David de-Vilder",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "ng build && tsc -p server",
+    "start": "node server/server.js",
+    "ui-unit-tests": "ng test",
+    "ui-e2e-tests": "ng e2e",
+    "server-unit-tests": "mocha --reporter spec --compilers ts:ts-node/register 'server/**/*.ts' "
   },
   "private": true,
   "dependencies": {
@@ -32,10 +31,15 @@
     "@angular/cli": "~6.0.5",
     "@angular/compiler-cli": "^6.0.3",
     "@angular/language-service": "^6.0.3",
+    "@types/chai": "^4.1.3",
+    "@types/chai-http": "^3.0.4",
     "@types/express": "^4.11.1",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
+    "@types/mocha": "^5.2.0",
     "@types/node": "^8.9.5",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "codelyzer": "~4.2.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -44,8 +48,9 @@
     "karma-coverage-istanbul-reporter": "~1.4.2",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "mocha": "^5.2.0",
     "protractor": "~5.3.0",
-    "ts-node": "~5.0.1",
+    "ts-node": "^5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
   }

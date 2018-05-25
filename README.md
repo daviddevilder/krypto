@@ -11,17 +11,20 @@ A cryptocurrency dashboard that:
 - All work should be committed into a git repository that you can share with us (i.e. Github) to provide evidence of version control​
 - User signup/login is not required
 
-## Build
-TODO - Gulp this up
-- ng build
-- tsc -p /server
-- node server/server.js
+## Run the app
 
+1. npm install
+2. npm run build
+3. npm start
 
-## Running unit tests
+## Run Angular unit tests (Karma)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+npm run ui-unit-tests
 
-## Running end-to-end tests
+## Run Angular end-to-end tests (Protractor)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+npm run ui-e2e-tests
+
+## Run NodeJS unit tests (Mocha & Chai)
+
+npm run server-unit-tests
