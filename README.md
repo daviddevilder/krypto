@@ -17,7 +17,7 @@ A cryptocurrency dashboard that:
 2. npm run build
 3. npm start
 
-## Run Angular unit tests (Karma)
+## Run Angular unit tests (Karma & Jasmine)
 
 npm run ui-unit-tests
 

@@ -6,12 +6,12 @@ chai.use(chaiHttp);
 const expect = chai.expect;
 
 describe('tokenList route', () => {
-    it('should respond with HTTP 200 status and dummy message', () => {
+    it('should respond with HTTP 200 status and non-empty payload', () => {
         return chai.request("http://localhost:3000")
             .get('/api/tokens/list')
             .then(res => {
                 expect(res.status).to.be.equal(200);
-                expect(res.text).to.be.equal("TODO: Get list of token prices from coinmarketcap API");
+                expect(res.text).not.to.be.empty;
             });
     });
 });
