@@ -1,0 +1,23 @@
+h2 {
+    text-align: center;
+    color: white;
+    margin: 10px auto;
+    padding: 8px;
+}
+
+.tokenContainer {
+    margin: 10px auto;
+    background-color: white;
+    width: 300px;
+    padding: 5px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.tokenContainer .name {
+    font-weight: bold;
+}
+
+.tokenContainer .price {
+    font-weight: bold;
+}

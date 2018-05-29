@@ -13,9 +13,9 @@ describe('TokenListComponent', () => {
         mockTokenService.LoadTokens.and.returnValue(of([new Token("dummyId", "dummyName", 1.23)]));
 
         TestBed.configureTestingModule({
-            declarations: [ TokenListComponent ],
+            declarations: [TokenListComponent],
             providers: [
-                { provide: TokenService, useValue: mockTokenService },
+                {provide: TokenService, useValue: mockTokenService},
             ]
         })
             .compileComponents();
