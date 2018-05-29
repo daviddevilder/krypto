@@ -1,0 +1,8 @@
+<h2>
+  Top 10 Cryptocurrencies
+</h2>
+
+<div class="tokenContainer" *ngFor="let token of Tokens">
+  <div class="name">{{token.Name}}</div>
+  <div class="price">${{token.Price}}</div>
+</div>
