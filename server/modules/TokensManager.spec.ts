@@ -23,9 +23,9 @@ describe('GetTokens', () => {
 
     it('should return tokens with id, name nad price properties populated', () => {
         TokensManager.GetTokens().then((tokens: Token[]) => {
-            expect(tokens[0].Id).to.be.greaterThan(0);
-            expect(tokens[0].Name.length).to.be.greaterThan(0);
-            expect(tokens[0].Price).to.be.greaterThan(0);
+            expect(tokens[0].id).to.be.greaterThan(0);
+            expect(tokens[0].name.length).to.be.greaterThan(0);
+            expect(tokens[0].price).to.be.greaterThan(0);
         });
     });
 });

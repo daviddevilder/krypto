@@ -1,0 +1,34 @@
+<h2>
+  My Portfolios
+</h2>
+
+<form [formGroup]="portfolioForm" (ngSubmit)="createPortfolio(portfolioForm.value)">
+  <div>
+    <input type="text" formControlName="name"/>
+  </div>
+  <div formArrayName="holdings" *ngFor="let holding of holdings.controls; let i = index;">
+    <div [formGroupName]="i">
+      <select formControlName="tokenId">
+        <option *ngFor="let token of Tokens" value= "{{token.id}}">
+          {{token.name}}
+        </option>
+      </select>
+      <input type="number" formControlName="quantity" placeholder="Quantity"/>
+    </div>
+  </div>
+  <button type="submit">Save</button>
+  <button type="button" (click)="addHolding()">Add More</button>
+</form>
+
+<div class="portfolioContainer" *ngFor="let portfolio of Portfolios">
+  <div class="name">Portfolio: {{portfolio.name}}</div>
+  <div class="totalValue">Total: {{portfolio.totalValue | currency}}</div>
+  <div class="holding" *ngFor="let holding of portfolio.holdings">
+    <div class="details">
+      {{holding.quantity}} {{holding.tokenName}}
+    </div>
+    <div class="value">
+      {{holding.value | currency}}
+    </div>
+  </div>
+</div>

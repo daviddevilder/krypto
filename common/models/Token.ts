@@ -1,7 +1,7 @@
 export class Token {
-    constructor(public Id: string,
-                public Name: string,
-                public Price: number) {
+    constructor(public id: string,
+                public name: string,
+                public price: number) {
 
     }
 }
