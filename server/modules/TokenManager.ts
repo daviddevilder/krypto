@@ -1,7 +1,7 @@
 import {Token} from "../../common/models/Token";
 const request = require('request');
 
-export namespace TokensManager {
+export namespace TokenManager {
     export async function GetTokens(): Promise<Token[]> {
         const url: String = "https://api.coinmarketcap.com/v2/ticker/?limit=10";
 

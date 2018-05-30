@@ -13,6 +13,8 @@ A cryptocurrency dashboard that:
 
 ## Run the app
 
+You will need to have MongoDB installed and running first - [instructions here](https://treehouse.github.io/installation-guides/mac/mongo-mac.html)
+
 1. npm install
 2. npm run build
 3. npm start

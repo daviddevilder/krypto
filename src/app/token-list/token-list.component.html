@@ -3,6 +3,6 @@
 </h2>
 
 <div class="tokenContainer" *ngFor="let token of Tokens">
-  <div class="name">{{token.Name}}</div>
-  <div class="price">${{token.Price}}</div>
+  <div class="name">{{token.name}}</div>
+  <div class="price">{{token.price | currency}}</div>
 </div>

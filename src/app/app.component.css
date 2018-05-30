@@ -16,6 +16,7 @@ h1 {
     padding: 8px;
 }
 
-.tokenList {
+.tokenList, .portfolioList {
     width: 50%;
+    float: left;
 }
