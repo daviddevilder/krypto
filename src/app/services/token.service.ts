@@ -13,7 +13,7 @@ export class TokenService {
     }
 
     public LoadTokens(): Observable<any> {
-        const url = this.host + "/api/tokens/list";
+        const url = this.host + "/api/tokens";
         return this.http.get(url);
     }
 }

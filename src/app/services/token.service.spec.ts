@@ -22,7 +22,7 @@ describe('TokenService', () => {
 
     describe('LoadTokens', () => {
         beforeEach(() => {
-            this.expectedUrl = 'http://localhost:3000/api/tokens/list';
+            this.expectedUrl = 'http://localhost:3000/api/tokens';
             this.mockResponseBody = {"some": "thing"};
         });
 
