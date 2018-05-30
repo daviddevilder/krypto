@@ -23,8 +23,6 @@ export namespace PortfolioManager {
         PortfolioModel.create({name: name, holdings: holdings}, function (err) {
             if (err) {
                 console.log("Failed to create portfolio");
-            } else {
-                console.log("Created portfolio successfully!");
             }
         });
     }
