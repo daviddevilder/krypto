@@ -24,3 +24,7 @@ h2 {
 .tokenContainer .price {
     font-weight: bold;
 }
+
+.tokenContainer img {
+    width: 300px;
+}

@@ -1,14 +1,14 @@
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {TestBed} from '@angular/core/testing';
-import {TokenService} from './token.service';
+import {AuctionService} from './auction.service';
 
-describe('TokenService', () => {
+describe('AuctionService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [HttpClientTestingModule],
-            providers: [TokenService]
+            providers: [AuctionService]
         });
-        this.tokenService = TestBed.get(TokenService);
+        this.auctionService = TestBed.get(AuctionService);
         this.httpMock = TestBed.get(HttpTestingController);
     });
 
@@ -17,17 +17,17 @@ describe('TokenService', () => {
     });
 
     it('should be created', () => {
-        expect(this.tokenService).toBeTruthy();
+        expect(this.auctionService).toBeTruthy();
     });
 
-    describe('LoadTokens', () => {
+    describe('LoadAuctions', () => {
         beforeEach(() => {
-            this.expectedUrl = 'http://localhost:3000/api/tokens';
+            this.expectedUrl = 'http://localhost:3000/api/auctions';
             this.mockResponseBody = {"some": "thing"};
         });
 
         it('should call the endpoint with the expected url', () => {
-            this.tokenService.LoadTokens().subscribe();
+            this.auctionService.LoadAuctions().subscribe();
 
             const actualRequest = this.httpMock.expectOne(this.expectedUrl);
             actualRequest.flush(this.mockResponseBody);
@@ -37,7 +37,7 @@ describe('TokenService', () => {
         });
 
         it('should return the response body', () => {
-            this.tokenService.LoadTokens()
+            this.auctionService.LoadAuctions()
                 .subscribe(data => {
                     expect(data).toEqual(this.mockResponseBody);
                 });

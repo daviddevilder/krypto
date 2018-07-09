@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display dashboard title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Krypto Dashboard');
+    expect(page.getParagraphText()).toEqual('Going Gone');
   });
 });
